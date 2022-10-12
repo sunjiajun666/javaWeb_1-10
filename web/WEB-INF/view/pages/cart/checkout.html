@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>结算页面</title>
-<link type="text/css" rel="stylesheet" href="../../static/css/style.css" >
-	<link rel="stylesheet" href="../../static/css/minireset.css" />
-	<link rel="stylesheet" href="../../static/css/common.css" />
-	<link rel="stylesheet" href="../../static/css/cart.css" />
+	<link type="text/css" rel="stylesheet" th:href="@{static/css/style.css}" >
+	<link rel="stylesheet" th:href="@{static/css/minireset.css}" />
+	<link rel="stylesheet" th:href="@{static/css/common.css}" />
+	<link rel="stylesheet" th:href="@{static/css/cart.css}" />
 <style type="text/css">
 	h1 {
 		text-align: center;
@@ -35,16 +35,15 @@
 			<div class="w">
 				<div class="header-left">
 					<a href="../../index.html">
-						<img src="../../static/img/logo.gif" alt=""
-						/></a>
+						<img th:src="@{static/img/logo.gif}" alt=""/></a>
 					<span>我的购物车</span>
 				</div>
 				<div class="header-right">
 					<h3>欢迎<span>会员</span>光临Deer书城</h3>
-					<div class="order"><a href="../order/order.html">我的订单</a></div>
-					<div class="destory"><a href="../../index.html">注销</a></div>
+					<div class="order"><a th:href="@{jumpHtml(jump='order')}">我的订单</a></div>
+					<div class="destory"><a th:href="@{index}">注销</a></div>
 					<div class="gohome">
-						<a href="../../index.html">返回</a>
+						<a th:href="@{index}">返回</a>
 					</div>
 				</div>
 			</div>

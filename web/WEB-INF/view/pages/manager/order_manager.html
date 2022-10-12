@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../../static/css/minireset.css" />
-    <link rel="stylesheet" href="../../static/css/common.css" />
-    <link rel="stylesheet" href="../../static/css/cart.css" />
-    <link rel="stylesheet" href="../../static/css/bookManger.css" />
-    <link rel="stylesheet" href="../../static/css/orderManger.css" />
+    <title>订单管理</title>
+    <link rel="stylesheet" th:href="@{static/css/minireset.css}" />
+    <link rel="stylesheet" th:href="@{static/css/common.css}" />
+    <link rel="stylesheet" th:href="@{static/css/cart.css}" />
+    <link rel="stylesheet" th:href="@{static/css/bookManger.css}" />
+    <link rel="stylesheet" th:href="@{static/css/orderManger.css}" />
   </head>
   <body>
     <div class="header">
       <div class="w">
         <div class="header-left">
-          <a href="../../index.html">
-            <img src="../../static/img/logo.gif" alt=""
+          <a th:href="@{index}">
+            <img th:src="@{static/img/logo.gif}" alt=""
           /></a>
           <h1>订单管理系统</h1>
         </div>
         <div class="header-right">
-          <a href="./book_manager.html" class="order">图书管理</a>
+          <a th:href="@{jumpHtml(jump='book_manager')}" class="order">图书管理</a>
           <a href="#" class="destory">订单管理</a>
-          <a href="../../index.html" class="gohome">返回商城</a>
+          <a th:href="@{index}" class="gohome">返回商城</a>
         </div>
       </div>
     </div>

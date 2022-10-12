@@ -21,17 +21,37 @@ public class JumpHtmlServlet extends ViewBaseServlet {
         if(req.getParameter("jump").equals("login")){
             processTemplate("/pages/user/login",req,resp);
         }
+        // 登录成功
+        if(req.getParameter("jump").equals("login_success")){
+            processTemplate("/pages/user/login_success",req,resp);
+        }
         // 注册
         if(req.getParameter("jump").equals("regist")){
             processTemplate("/pages/user/regist",req,resp);
+        }
+        // 注册成功
+        if(req.getParameter("jump").equals("regist_success")){
+            processTemplate("/pages/user/regist_success",req,resp);
         }
         // 购物车
         if(req.getParameter("jump").equals("cart")){
             processTemplate("/pages/cart/cart",req,resp);
         }
-        // 后台管理
+        // 图书管理
         if(req.getParameter("jump").equals("book_manager")){
             processTemplate("/pages/manager/book_manager",req,resp);
+        }
+        // 图书订单管理
+        if(req.getParameter("jump").equals("order_manager")){
+            processTemplate("/pages/manager/order_manager",req,resp);
+        }
+        // 添加图书
+        if(req.getParameter("jump").equals("book_edit")){
+            processTemplate("/pages/manager/book_edit",req,resp);
+        }
+        // 我的订单
+        if(req.getParameter("jump").equals("order")){
+            processTemplate("/pages/order/order",req,resp);
         }
     }
 }
